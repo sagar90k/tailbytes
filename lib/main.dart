@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tailbytes/screens/MyHomePage.dart';
-import 'package:tailbytes/constants/constantvalues.dart';
 import 'package:tailbytes/screens/LoginPage.dart';
+import 'package:tailbytes/widgetstore/addPetCard.dart';
+import 'package:tailbytes/widgetstore/regsitrationFormAni.dart';
+import 'package:tailbytes/screens/petreg/petRegForm.dart';
+import 'package:tailbytes/widgetstore/testWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tail Bytes',
       theme: ThemeData(
         // This is the theme of your application.
@@ -21,10 +24,10 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
 
         // Define the default font family.
-        fontFamily: 'Times New Roman',
+        fontFamily: '',
 
         // Define the default TextTheme. Use this to specify the default
         // text styling for headlines, titles, bodies of text, and more.
@@ -35,7 +38,7 @@ class MyApp extends StatelessWidget {
 
         ),
       ),
-      home: LoginPage(),
+      home: addPetCard(),
     );
   }
 }
